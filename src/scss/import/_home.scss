@@ -1,0 +1,195 @@
+.home {
+   width: 100%;
+   .home-header {
+      width: 100%;
+      background: $primary;
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+      .home__navbar {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         padding: 1.875rem 0; /* 30px */
+         .app__name {
+            display: flex;
+            align-items: center;
+            color: #fff;
+            .unsplash-icon {
+               margin-right: 1.875rem; /* 30px */
+               path {
+                  fill: #fff;
+               }
+            }
+            h2 {font-weight: 600;}
+         }
+         .form {
+            width: 30%;
+            display: flex;
+            .search__bar {
+               width: 100%;
+               padding: 0.625rem 1.25rem; /* 10px 20px */
+               font-family: 'Poppins', sans-serif;
+               font-size: 0.875rem; /* 14px */
+               font-weight: 400;
+               outline: none;
+               border: none;
+               border-radius: 3px 0 0 3px;
+            }
+            .btn__submit {
+               margin-left: 0.3125rem; /* 5px */
+               padding: 0.625rem; /* 10px */
+               font-size: 0.875rem; /* 14px */
+               border: none;
+               border-radius: 0 3px 3px 0;
+               color: $primary;
+               background: #FFF;
+               transition: .3s all ease;
+               cursor: pointer;
+               &:hover {
+                  color: #fff;
+                  background: $blue;
+               }
+            }
+         }
+      }
+   }
+
+   .home__accounts {
+      width: 100%;
+      padding: 3.125rem 0; /* 50px */
+      .subtitle {
+         margin-bottom: 1.25rem; /* 20px */
+         font-weight: 600;
+         font-size: 1.875rem; /* 30px */
+         color: $primary;
+      }
+      .accounts__grid {
+         display: grid;
+         grid-template-columns: repeat(3, 1fr);
+         gap: 1.25rem; /* 20px */
+         .account {
+            position: relative;
+            padding: 1.875rem; /* 30px */
+            border-radius: 10px;
+            background: #fff;
+            box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+            .user__image {
+               position: relative;
+               width: 40%;
+               margin-bottom: 1.25rem; /* 20px */
+               img {
+                  width: 100%;
+                  border-radius: 10px; /* 10px */
+               }
+            }
+            .user__content {
+               margin-bottom: 1.875rem; /* 30px */
+               .user__info {
+                  h2 {
+                     margin-right: 0.625rem; /* 10px */
+                     font-size: 1.25rem; /* 20px */
+                     font-weight: 700;
+                     color: $primary;
+                  }
+                  span {
+                     font-size: 0.875rem; /* 14px */
+                     font-weight: 600;
+                     color: rgba($color: $primary, $alpha: .7);
+                  }
+               }
+               .user__likes {
+                  position: absolute;
+                  top: 0;
+                  right: 0;
+                  display: flex;
+                  align-items: center;
+                  padding: 0.625rem; /* 10px */
+                  border-radius: 0 10px 0 10px;
+                  color: #fff;
+                  background: $primary;
+                  .like__icon {
+                     margin-right: 0.625rem; /* 10px */
+                  }
+               }
+               .btn__profile {
+                  position: absolute;
+                  bottom: 0;
+                  left: 0;
+                  display: flex;
+                  align-items: center;
+                  padding: 0.625rem 1.875rem; /* 10px 20px */
+                  font-family: 'Poppins', sans-serif;
+                  font-size: 0.875rem; /* 14px */
+                  border: none;
+                  border-radius: 0 10px 0 10px;
+                  color: #fff;
+                  background: $primary;
+                  cursor: pointer;
+                  .user__icon {margin-left: 0.625rem; /* 10px */}
+               }
+            }
+         }
+      }
+   }
+}
+
+/* Media queries */
+@media screen and (max-width: 768px) {
+   .home {
+      width: 100%;
+      .home-header {
+         .home__navbar {
+            flex-direction: column;
+            .app__name {
+               margin-bottom: 1.25rem; /* 20px */
+            }
+            .form {
+               width: 100%;
+            }
+         }
+      }
+      .home__accounts {
+         .accounts__grid {
+            grid-template-columns: repeat(2, 1fr);
+            .account {
+               .user__image {
+                  width: 50%;
+               }
+               .user__content {
+                  .btn__profile {
+                     width: 100%;
+                     border-radius: 0 0 10px 10px;
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 600px) {
+   .home {
+      width: 100%;
+      .home-header {
+         .home__navbar {
+            .app__name {
+               flex-direction: column;
+               .unsplash-icon {
+                  margin-right: 0;
+                  margin-bottom: 10px;
+               }
+               h2 {
+                  font-size: 1.25rem; /* 20px */
+               }
+            }
+         }
+      }
+      .home__accounts {
+         .subtitle {
+            font-size: 1.25rem; /* 20px */
+         }
+         .accounts__grid {
+            grid-template-columns: 1fr;
+         }
+      }
+   }
+}
