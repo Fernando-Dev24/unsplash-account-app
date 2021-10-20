@@ -18,6 +18,11 @@ export const AccountFeed = () => {
    const [showWork, setShowWork] = useState(false);
    const [userData, setUserData] = useState({});
 
+   /* handleFullScreen function */
+   const handleFullScreen = (e) => {
+      console.log(e);
+   };
+
    /* Getting corresponding data from url username */
    useEffect(() => {
       if(username) {
@@ -131,6 +136,7 @@ export const AccountFeed = () => {
                   return (
                      <article className="photo" key={photo.id}>
                         <img
+                           onClick={handleFullScreen}
                            src={photo.urls.regular}
                            alt={`Work by ${username} from Unsplash.com`}
                         />
