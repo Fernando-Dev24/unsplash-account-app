@@ -10,7 +10,7 @@ const AccountsProvider = ({ children }) => {
 
    /* API Variables */
    const defaultSearchParams = useMemo(() => {
-      return ['mike', 'louis', 'rachel', 'nas', 'mar', 'kate'];
+      return ['mike', 'louis', 'rachel', 'nas', 'mar', 'kate', 'andrea', 'stephanie', 'ventura'];
    }, []);
    const API_KEY = process.env.REACT_APP_API_KEY;
    const API_ENDPOINT = `https://api.unsplash.com`;

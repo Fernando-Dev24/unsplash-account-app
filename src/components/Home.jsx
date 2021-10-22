@@ -10,6 +10,7 @@ export const Home = () => {
    /* Context variables */
    const history = useHistory();
    const {accounts, setAccounts} = useAccountsContext();
+   console.log(accounts);
 
    /* States variables */
    const [searchUser, setSearchUser] = useState('');
